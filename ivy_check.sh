@@ -11,9 +11,10 @@ while [[ $# -gt 0 ]]; do
       shift
       ;;
     *)
+      # at the end, $file should contain only the last argument (and the rest
+      # should be forwarded to Ivy via $args[*])
       if [[ -n "$file" ]]; then
-        echo "expected a single input file" 2>&1
-        exit 1
+        args+=("$file")
       fi
       file="$1"
       shift
