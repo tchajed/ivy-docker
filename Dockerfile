@@ -2,9 +2,9 @@
 FROM ubuntu:18.04
 
 COPY install.sh .
-RUN ./install.sh
+RUN bash install.sh
 
 COPY uninstall.sh .
-RUN ./uninstall.sh
+RUN bash uninstall.sh
 
 ENTRYPOINT ["/usr/local/bin/ivy_check"]
