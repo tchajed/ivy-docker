@@ -2,7 +2,7 @@
 
 ## Usage
 
-Get this from Docker Hub: `docker pull docker.io/tchajed/ivy:latest`.
+Get this from Docker Hub: `docker pull tchajed/ivy`.
 
 Then just use `./ivy_check` as usual. You might want to add this repo to your
 `$PATH`.
