@@ -2,8 +2,6 @@
 
 set -eu
 
-apt-get update -y
-apt install -yq tzdata
 apt-get install -y python python-pip g++ cmake python-ply python-pygraphviz git python-tk tix pkg-config libssl-dev libreadline-dev
 pip install pyparsing==2.1.4 pexpect
 
