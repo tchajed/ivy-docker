@@ -22,8 +22,13 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
+if [ -z "$file" ]; then
+  echo "ivy file not provided" 1>&2
+  exit 1
+fi
+
 if [ ! -e "$file" ]; then
-  echo "$file does not exist" 2>&1
+  echo "$file does not exist" 1>&2
   exit 1
 fi
 
@@ -31,4 +36,4 @@ file=$(realpath "$file")
 dir=$(dirname "$file")
 name=$(basename "$file")
 
-docker run -i -t --rm -v "$dir:/ivy" ivy "${args[@]}" "/ivy/$name"
+docker run -i -t --rm -v "$dir:/ivy" tchajed/ivy "${args[@]}" "/ivy/$name"
