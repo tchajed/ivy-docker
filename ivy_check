@@ -35,5 +35,9 @@ fi
 file=$(realpath "$file")
 dir=$(dirname "$file")
 name=$(basename "$file")
+cmd=$(basename "$0")
 
-docker run --rm -v "$dir:/ivy:ro" tchajed/ivy "${args[@]}" "/ivy/$name"
+docker run --rm -v "$dir:/ivy:ro" \
+  --entrypoint "/usr/local/bin/$cmd" \
+  tchajed/ivy \
+  "${args[@]}" "/ivy/$name"
