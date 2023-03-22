@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+## Script that behaves like `ivy_check` but runs in the Docker container.
+##
+## When invoked as `ivy_show`, does the same thing but runs `ivy_show` instead.
+##
+## The way this works is to run Docker while mounting the path to the input file
+## from the host file system into the container, so that Ivy can access it.
+
 set -eu
 
 args=()
