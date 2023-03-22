@@ -15,7 +15,7 @@ You can also use `./ivy_show` in the same way.
 
 Create image (takes a while, needs to compile some large C++ dependencies):
 
-```
+```sh
 docker build -t tchajed/ivy:latest .
 docker push tchajed/ivy
 ```
