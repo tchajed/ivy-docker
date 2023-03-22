@@ -10,7 +10,6 @@ ENV LANG=en_US.UTF-8 \
 
 COPY install.sh .
 RUN bash install.sh
-RUN apt-get install -y python-tk
 
 COPY uninstall.sh .
 RUN bash uninstall.sh

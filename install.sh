@@ -2,7 +2,7 @@
 
 set -eu
 
-apt-get install -y python python-pip g++ cmake python-ply python-pygraphviz git pkg-config libssl-dev libreadline-dev
+apt-get install -y python python-pip g++ cmake python-ply python-pygraphviz python-tk git pkg-config libssl-dev libreadline-dev
 pip install pyparsing==2.1.4 pexpect
 
 git clone --recurse-submodules https://github.com/kenmcmil/ivy.git
