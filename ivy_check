@@ -6,19 +6,19 @@ args=()
 file=""
 while [[ $# -gt 0 ]]; do
   case "$1" in
-    -*)
-      args+=("$1")
-      shift
-      ;;
-    *)
-      # at the end, $file should contain only the last argument (and the rest
-      # should be forwarded to Ivy via $args[*])
-      if [[ -n "$file" ]]; then
-        args+=("$file")
-      fi
-      file="$1"
-      shift
-      ;;
+  -*)
+    args+=("$1")
+    shift
+    ;;
+  *)
+    # at the end, $file should contain only the last argument (and the rest
+    # should be forwarded to Ivy via $args[*])
+    if [[ -n "$file" ]]; then
+      args+=("$file")
+    fi
+    file="$1"
+    shift
+    ;;
   esac
 done
 
